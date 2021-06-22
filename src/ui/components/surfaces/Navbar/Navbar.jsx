@@ -11,6 +11,10 @@ const Navbar = () => {
         fontFamily={theme.typography.main}
       >
         <NavItems>PÁGINA INICIAL</NavItems>
+        <NavItems>CAMISETAS</NavItems>
+        <NavItems>CALÇAS</NavItems>
+        <NavItems>SAPATOS</NavItems>
+        <NavItems>CONTATO</NavItems>
       </Nav>
     </NavbarContainer>
   )

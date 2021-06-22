@@ -9,11 +9,13 @@ export const NavbarContainer = styled.nav`
 
 export const Nav = styled.ul`
   width: 60%;
-  padding: 0.7rem 0;
+  padding: 0.8rem 0;
   color: white;
   font-weight: ${(props) => props.weight};
   font-family: ${(props) => props.fontFamily};
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  display: flex;
+  gap: 8%;
 `
 
 export const NavItems = styled.li`
