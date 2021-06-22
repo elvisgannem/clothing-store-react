@@ -8,11 +8,22 @@ export const Container = styled.div`
   grid-template-columns: 200px 1fr;
   gap: 1rem;
   grid-template-areas:
-    'sidebar slider slider'
-    'sidebar content content';
+    'sidebar slider'
+    'sidebar content';
 
   @media (max-width: 1024px) {
     width: 95%;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 150px 1fr;
+  }
+
+  @media (max-width: 450px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'slider'
+      'content';
   }
 `
 
@@ -22,6 +33,10 @@ export const Sidebar = styled.aside`
   color: ${(props) => props.textColor};
   padding: 1rem;
   grid-area: sidebar;
+
+  @media (max-width: 450px) {
+    display: none;
+  }
 `
 
 export const ListItems = styled.li`
@@ -40,6 +55,14 @@ export const Slider = styled.div`
   background-color: ${(props) => props.color};
   grid-area: slider;
   height: 250px;
+
+  @media (max-width: 768px) {
+    height: 180px;
+  }
+
+  @media (max-width: 450px) {
+    height: 120px;
+  }
 `
 
 export const Content = styled.main`

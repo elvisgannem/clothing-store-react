@@ -8,10 +8,10 @@ import {
   Title,
   Content,
 } from './Main.style'
-import themeContext from './../../../../contexts/themeContext'
+import ThemeContext from './../../../../context/ThemeContext'
 
 const Main = () => {
-  const theme = useContext(themeContext)
+  const theme = useContext(ThemeContext)
   return (
     <Container>
       <Sidebar

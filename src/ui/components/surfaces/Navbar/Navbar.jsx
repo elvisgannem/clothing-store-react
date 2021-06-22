@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import { NavbarContainer, Nav, NavItems } from './Navbar.style'
-import themeContext from './../../../../contexts/themeContext'
+import ThemeContext from './../../../../context/ThemeContext'
 
 const Navbar = () => {
-  const theme = useContext(themeContext)
+  const theme = useContext(ThemeContext)
   return (
     <NavbarContainer color={theme.color.primary.main}>
       <Nav

@@ -4,11 +4,21 @@ export const Container = styled.div`
   width: 60%;
   margin: 0 auto;
   padding: 1.5rem 0;
+
+  @media (max-width: 1024px) {
+    width: 95%;
+  }
 `
 
 export const FlexContainer = styled.div`
   display: flex;
   justify-content: space-between;
+`
+
+export const SearchContainer = styled.div`
+  @media (max-width: 450px) {
+    display: none;
+  }
 `
 
 export const Button = styled.button`
@@ -24,4 +34,14 @@ export const Input = styled.input`
   padding: 0.5rem 0;
   outline: none;
   border: 1px solid ${(props) => props.border};
+`
+
+export const Wrapper = styled.button`
+  border: none;
+  outline: none;
+  background: transparent;
+
+  @media (min-width: 451px) {
+    display: none;
+  }
 `
