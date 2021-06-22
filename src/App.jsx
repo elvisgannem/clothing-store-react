@@ -1,4 +1,4 @@
-import Header from './ui/components/surfaces/Header'
+import Header from './ui/components/surfaces/Header/Header'
 import ThemeContext from './contexts/themeContext'
 import theme from './ui/themes/theme'
 
