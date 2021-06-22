@@ -10,6 +10,10 @@ export const Container = styled.div`
   grid-template-areas:
     'sidebar slider slider'
     'sidebar content content';
+
+  @media (max-width: 1024px) {
+    width: 95%;
+  }
 `
 
 export const Sidebar = styled.aside`
