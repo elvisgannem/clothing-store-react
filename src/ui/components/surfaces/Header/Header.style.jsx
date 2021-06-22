@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
   width: 60%;
   margin: 0 auto;
-  padding: 0.5rem 0;
+  padding: 1.5rem 0;
 `
 
 export const FlexContainer = styled.div`
