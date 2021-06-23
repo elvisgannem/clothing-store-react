@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import Logo from './../../../../assets/img/logo_webjump.png'
 import { IoMenu, IoSearch } from 'react-icons/io5'
 
@@ -11,18 +11,9 @@ import {
   Wrapper,
 } from './Header.style'
 import ThemeContext from './../../../../context/ThemeContext'
-import ApiService from './../../../../services/ApiService'
 
 const Header = () => {
-  const [categories, setCategories] = useState([])
   const theme = useContext(ThemeContext)
-
-  useEffect(() => {
-    fetch(`${ApiService.baseURL}V1/categories/list`)
-      .then((response) => response.json())
-      .then((data) => setCategories(data))
-      .catch((error) => console.log(error))
-  }, [])
 
   return (
     <Container>

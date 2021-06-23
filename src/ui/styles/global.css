@@ -3,3 +3,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+a,
+a:active,
+a:focus {
+  color: white;
+  text-decoration: none;
+}

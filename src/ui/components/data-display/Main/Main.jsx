@@ -9,9 +9,11 @@ import {
   Content,
 } from './Main.style'
 import ThemeContext from './../../../../context/ThemeContext'
+import CategoriesContext from './../../../../context/CategoriesContext'
 
 const Main = () => {
   const theme = useContext(ThemeContext)
+  const categories = useContext(CategoriesContext)
   return (
     <Container>
       <Sidebar
@@ -20,9 +22,13 @@ const Main = () => {
         textColor={theme.color.secondary.dark}
       >
         <ListItems>Página Inicial</ListItems>
-        <ListItems>Camisetas</ListItems>
-        <ListItems>Calças</ListItems>
-        <ListItems>Sapatos</ListItems>
+        {categories.items !== undefined ? (
+          categories.items.map((item, index) => (
+            <ListItems>{item.name}</ListItems>
+          ))
+        ) : (
+          <ListItems>Carregando...</ListItems>
+        )}
         <ListItems>Contato</ListItems>
       </Sidebar>
 
