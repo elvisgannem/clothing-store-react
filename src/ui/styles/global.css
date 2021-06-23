@@ -7,6 +7,6 @@
 a,
 a:active,
 a:focus {
-  color: white;
   text-decoration: none;
+  color: inherit;
 }

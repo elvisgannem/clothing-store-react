@@ -49,6 +49,7 @@ export const ListItems = styled.li`
     font-weight: 800;
     margin-right: 0.25rem;
   }
+
 `
 
 export const Slider = styled.div`

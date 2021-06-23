@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import {
   Container,
   Sidebar,
@@ -25,7 +26,7 @@ const Main = () => {
 
         {categories !== undefined ? (
           categories.items.map((item, index) => (
-            <ListItems key={index}>{item.name}</ListItems>
+            <ListItems key={index}><Link to={`/${item.path}`}>{item.name}</Link></ListItems>
           ))
         ) : (
           <ListItems>Carregando...</ListItems>

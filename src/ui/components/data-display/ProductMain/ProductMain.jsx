@@ -19,7 +19,7 @@ const ProductMain = (props) => {
                     weight={theme.typography.weight.normal}
                     >{props.category}</Title>
                     <OrderByBar /> 
-                    <ProductsGrid />
+                    <ProductsGrid id={props.id} />
                     
                 </Content>
         </Container>

@@ -7,6 +7,10 @@ export const Container = styled.div `
     padding-bottom: 1rem;
     display: flex;
     gap: 1rem;
+
+    @media (max-width: 1024px){
+        width: 95%;
+    }
 `
 
 export const Title = styled.h1 `
