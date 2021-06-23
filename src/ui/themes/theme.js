@@ -15,12 +15,14 @@ const theme = {
       gray: '#b3b3b3',
       darkgray: '#ACACAC',
       lightgray: '#E2DEDB',
+      select: '#5c5c5c'
     },
   },
   typography: {
     main: 'Open Sans',
     weight: {
       normal: '400',
+      bold: '600',
       extrabold: '800',
     },
   },

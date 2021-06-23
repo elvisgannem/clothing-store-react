@@ -13,7 +13,7 @@ import CategoriesContext from './../../../../context/CategoriesContext'
 
 const Main = () => {
   const theme = useContext(ThemeContext)
-  const categories = useContext(CategoriesContext)
+  const { categories } = useContext(CategoriesContext)
   return (
     <Container>
       <Sidebar
@@ -22,13 +22,15 @@ const Main = () => {
         textColor={theme.color.secondary.dark}
       >
         <ListItems>Página Inicial</ListItems>
-        {categories.items !== undefined ? (
+
+        {categories !== undefined ? (
           categories.items.map((item, index) => (
-            <ListItems>{item.name}</ListItems>
+            <ListItems key={index}>{item.name}</ListItems>
           ))
         ) : (
           <ListItems>Carregando...</ListItems>
         )}
+
         <ListItems>Contato</ListItems>
       </Sidebar>
 

@@ -1,12 +1,13 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { NavbarContainer, Nav, NavItems } from './Navbar.style'
 import ThemeContext from './../../../../context/ThemeContext'
+import CategoriesContext from './../../../../context/CategoriesContext'
 import ApiService from './../../../../services/ApiService'
 
 const Navbar = () => {
-  const [categories, setCategories] = useState()
   const theme = useContext(ThemeContext)
+  const { categories, setCategories } = useContext(CategoriesContext)
 
   useEffect(() => {
     fetch(`${ApiService.baseURL}V1/categories/list`)
