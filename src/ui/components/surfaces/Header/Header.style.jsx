@@ -45,30 +45,3 @@ export const Wrapper = styled.button`
     display: none;
   }
 `
-
-export const ResultContainer = styled.div `
-  position: fixed;
-  background: white;
-  padding: 0.5rem 2rem;
-  border-radius: 3px;
-`
-
-export const ResultTitle = styled.h3 `
-  font-size: 1rem;
-  text-align: center;
-  font-family: ${(props) => props.fontFamily};
-  font-weight: ${(props) => props.weight};
-`
-
-export const Results = styled.p `
-  margin-top: 0.5rem;
-  font-family: ${(props) => props.fontFamily};
-  font-weight: ${(props) => props.weight};
-  font-size: 0.8rem;
-`
-
-export const ResultHeader = styled.div `
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`
