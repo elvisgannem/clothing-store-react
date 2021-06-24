@@ -16,7 +16,7 @@ const Navbar = () => {
         setCategories(data)
       })
       .catch((error) => console.log(error))
-  }, [])
+  }, [setCategories])
 
   return (
     <NavbarContainer color={theme.color.primary.main}>

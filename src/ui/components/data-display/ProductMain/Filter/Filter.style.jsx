@@ -5,6 +5,10 @@ export const FilterContainer = styled.div `
     border: 1px solid #5e606347;
     border-radius: 3px;
     padding: 0.5rem;
+
+    @media (max-width: 440px){
+        width: 100%;
+    }
 `
 
 export const Title = styled.h2 `
@@ -12,6 +16,7 @@ export const Title = styled.h2 `
     color: ${(props) => props.color};
     font-weight: ${(props) => props.weight};
     font-size: 1rem;
+
 `
 
 export const Subtitle = styled.h3 `

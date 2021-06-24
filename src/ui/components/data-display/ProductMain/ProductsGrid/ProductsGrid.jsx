@@ -1,20 +1,28 @@
 import React, { useEffect, useContext } from 'react'
 import { Container, Image, Title, Price, Button, ProductContainer } from './ProductsGrid.style'
 import ProductsContext from './../../../../../context/ProductsContext'
-import CategoriesContext from './../../../../../context/CategoriesContext'
 import ThemeContext from './../../../../../context/ThemeContext'
+import ApiService from './../../../../../services/ApiService'
 
 const ProductsGrid = (props) => {
     const theme = useContext(ThemeContext)
     const { products, setProducts } = useContext(ProductsContext)
-    const { categories } = useContext(CategoriesContext)
-
+    
     useEffect(() => {
-        fetch(`http://localhost:8888/api/V1/categories/${props.id}`)
+        fetch(`${ApiService.baseURL}V1/categories/${props.id}`)
         .then(response => response.json())
         .then(data => setProducts(data))
-        .catch(error => console.log(error))
-    }, [props.id])
+         .catch(error => console.log(error))
+    }, [props.id, setProducts])
+
+    let currentProduct
+
+    if (products !== undefined){
+    //Getting the current products
+    const indexLastProduct = props.currentPage * props.productsPerPage
+    const indexFirstProduct = indexLastProduct - props.productsPerPage
+    currentProduct = products.items.slice(indexFirstProduct, indexLastProduct)
+    }
 
     return (
         <div>
@@ -26,8 +34,8 @@ const ProductsGrid = (props) => {
         <ProductContainer> 
 
 
-                {products.items.map((item, index) => (
-                <Container>
+                {currentProduct.map((item, index) => (
+                <Container key={index}>
                     <Image src={`${item.image}`} 
                     borderColor={theme.color.secondary.lightgray}/>
 
@@ -48,7 +56,7 @@ const ProductsGrid = (props) => {
                     color={'white'}
                     background={theme.color.primary.cyan}
                     weight={theme.typography.weight.bold}
-                    onHoverBackground={theme.color.primary.darkcyan}
+                    hoverBackground={theme.color.primary.darkcyan}
                     >COMPRAR</Button> 
 
                 </Container>

@@ -3,13 +3,30 @@ import styled from 'styled-components'
 export const Container = styled.div`
     margin-top: 1rem;
     text-align: center;
+    width: 25%;
+
+    @media (max-width: 1175px){
+        width: 33%;
+    }
+
+    @media (max-width: 1024px){
+        width: 25%;
+    }
+
+    @media (max-width: 745px){
+        width: 33%;
+    }
+
+    @media (max-width: 600px){
+        width: 50%;
+    }
 `
 
 export const ProductContainer = styled.div `
     display: flex;
     flex-wrap: wrap;
-    column-gap: 5%;
-    justify-content: space-between;
+    /* column-gap: 5%;  */
+     /* justify-content: space-between; */
 `
 export const Image = styled.img`
     width: 120px;
@@ -53,7 +70,7 @@ export const Button = styled.button `
     padding: 0.3rem 0;
 
     &:hover{
-        background-color: ${(props) => props.onHoverBackground};
+        background-color: ${(props) => props.hoverBackground};
         transition: 0.2s ease-in-out;
     }
 

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import Logo from './../../../../assets/img/logo_webjump.png'
 import { IoMenu, IoSearch } from 'react-icons/io5'
 
@@ -11,17 +11,23 @@ import {
   Wrapper,
 } from './Header.style'
 import ThemeContext from './../../../../context/ThemeContext'
+import MobileNavbar from './../MobileNavbar/MobileNavbar'
 
 const Header = () => {
   const theme = useContext(ThemeContext)
+  const [showMenu, setShowMenu] = useState(false)
 
   return (
     <Container>
       <FlexContainer>
         {/* HIDE IN DESKTOP */}
         <Wrapper>
-          <IoMenu size={'30px'} />
+          <IoMenu 
+            size={'30px'}
+            onClick={() => setShowMenu(!showMenu)} />
         </Wrapper>
+
+        {showMenu ? <MobileNavbar setShowMenu={setShowMenu} /> : ''}
 
         <div>
           <img src={Logo} alt="Logo Webjump!" />

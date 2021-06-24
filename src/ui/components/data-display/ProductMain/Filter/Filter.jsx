@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { FilterContainer, Title, Subtitle, List, Color, Colors } from './Filter.style'
 import ThemeContext from './../../../../../context/ThemeContext'
 import CategoriesContext from './../../../../../context/CategoriesContext'
@@ -22,7 +23,14 @@ const Filter = () => {
                 >CATEGORIAS</Subtitle>
 
                 {categories !== undefined ? 
-                categories.items.map((item, index) => <List fontFamily={theme.typography.main} color={theme.color.secondary.dark} key={index}>{item.name}</List>)
+                    categories.items.map((item, index) => 
+                        <List 
+                        fontFamily={theme.typography.main} 
+                        color={theme.color.secondary.dark} 
+                        key={index}>
+                            <Link to={`/${item.path}`}>{item.name}</Link>
+                        </List>
+                    )
                 : ''}
 
                 <Subtitle

@@ -23,7 +23,7 @@ function App() {
         <Router>
           <Switch>
             {categories !== undefined ? 
-            <Route exact path={`/${categories.items[0].path}`}>
+            <Route path={`/${categories.items[0].path}`}>
               <Header />
               <Navbar />
               <CurrentPage title={'Camisetas'} />
@@ -32,7 +32,7 @@ function App() {
             </Route>
             : '' }
             {categories !== undefined ? 
-            <Route exact path={`/${categories.items[1].path}`}>
+            <Route path={`/${categories.items[1].path}`}>
               <Header />
               <Navbar />
               <CurrentPage title={'Calças'} />
@@ -41,7 +41,7 @@ function App() {
             </Route>
             : '' }
             {categories !== undefined ? 
-            <Route exact path={`/${categories.items[2].path}`}>
+            <Route path={`/${categories.items[2].path}`}>
               <Header />
               <Navbar />
               <CurrentPage title={'Calçados'} />
@@ -49,7 +49,7 @@ function App() {
               <Footer />
             </Route>
             : '' }
-            <Route exact path={'/'}>
+            <Route path={'/'}>
               <Header />
               <Navbar />
               <Main />
