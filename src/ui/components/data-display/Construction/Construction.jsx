@@ -13,9 +13,9 @@ const Construction = () => {
                 Esta pagina está em construção
             </Title>
             <Icons>
-                <a href="https://www.linkedin.com/in/elvis-gannem-45a3b1142/" target="_blank"><IoLogoLinkedin size={'25px'} color={theme.color.secondary.dark} /></a>
-                <a href="https://github.com/elvisgannem" target="_blank"><IoLogoGithub size={'25px'} color={theme.color.secondary.dark} /></a>
-                <a href="https://elvisgannem.com/" target="_blank"><IoGlobeOutline size={'25px'} color={theme.color.secondary.dark} /></a>
+                <a href="https://www.linkedin.com/in/elvis-gannem-45a3b1142/" target="_blank" rel="noreferrer"><IoLogoLinkedin size={'25px'} color={theme.color.secondary.dark} /></a>
+                <a href="https://github.com/elvisgannem" target="_blank" rel="noreferrer"><IoLogoGithub size={'25px'} color={theme.color.secondary.dark} /></a>
+                <a href="https://elvisgannem.com/" target="_blank" rel="noreferrer"><IoGlobeOutline size={'25px'} color={theme.color.secondary.dark} /></a>
             </Icons>
         </Container>
     )
