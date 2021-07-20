@@ -7,27 +7,10 @@ import Main from './../data-display/Main/Main'
 import CategoriesContext from './../../../context/CategoriesContext'
 import CurrentPage from './../data-display/CurrentPage/CurrentPage'
 import ProductMain from './../data-display/ProductMain/ProductMain'
+import Construction from './../data-display/Construction/Construction'
 
 const Routes = () => {
     const { categories } = useContext (CategoriesContext)
-
-    // const transitions = useTransition(location, {
-    //   from: {
-    //     opacity: 0,
-    //     position: 'absolute',
-    //     transform: 'translateY(50px)',
-    //   },
-    //   enter: {
-    //     opacity: 1,
-    //     position: 'absolute',
-    //     transform: 'translateY(0)',
-    //   },
-    //   leave: {
-    //     opacity: 0,
-    //     position: 'absolute',
-    //     transform: 'translateY(50px)',
-    //   },
-    // })
     return  (
         <Router>
           <Switch>
@@ -58,6 +41,12 @@ const Routes = () => {
               <Footer />
             </Route>
             : '' }
+            <Route path={'/contact'}>
+              <Header />
+              <Navbar />
+              <Construction />
+              <Footer />
+            </Route>
             <Route path={'/'}>
               <Header />
               <Navbar />

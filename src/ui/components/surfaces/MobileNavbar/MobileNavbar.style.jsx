@@ -39,3 +39,9 @@ export const ListElement = styled.li `
     color: ${(props) => props.color};
     text-align: center;
 `
+
+export const Title = styled.h1`
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
+  color: ${(props) => props.color};
+`

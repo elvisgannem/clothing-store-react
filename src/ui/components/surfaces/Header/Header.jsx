@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react'
-import Logo from './../../../../assets/img/logo_webjump.png'
 import { IoMenu, IoSearch } from 'react-icons/io5'
 import {
   Container,
@@ -7,7 +6,8 @@ import {
   FlexContainer,
   Input,
   SearchContainer,
-  Wrapper
+  Wrapper,
+  Title
 } from './Header.style'
 import ThemeContext from './../../../../context/ThemeContext'
 import MobileNavbar from './../MobileNavbar/MobileNavbar'
@@ -30,7 +30,8 @@ const Header = () => {
         {showMenu ? <MobileNavbar setShowMenu={setShowMenu} /> : ''}
 
         <div>
-          <img src={Logo} alt="Logo Webjump!" />
+          {/* <img src={Logo} alt="Logo Webjump!" /> */}
+          <Title color={theme.color.primary.main}>Clothing Store</Title>
         </div>
 
         <Wrapper>

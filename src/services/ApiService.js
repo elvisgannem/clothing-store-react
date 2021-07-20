@@ -1,5 +1,5 @@
 const ApiService = {
-  baseURL: 'http://localhost:8888/api/',
+  baseURL: 'https://wj-products-api.herokuapp.com/',
 }
 
 export default ApiService

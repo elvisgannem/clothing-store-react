@@ -45,3 +45,9 @@ export const Wrapper = styled.button`
     display: none;
   }
 `
+
+export const Title = styled.h1`
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
+  color: ${(props) => props.color};
+`

@@ -23,7 +23,7 @@ const Sidebar = () => {
           <ListItems>Carregando...</ListItems>
         )}
 
-        <ListItems>Contato</ListItems>
+        <ListItems><Link to={'/contact'}>Contato</Link></ListItems>
       </SidebarComp>
     )
 }

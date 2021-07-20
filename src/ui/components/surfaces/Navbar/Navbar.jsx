@@ -10,7 +10,7 @@ const Navbar = () => {
   const { categories, setCategories } = useContext(CategoriesContext)
 
   useEffect(() => {
-    fetch(`${ApiService.baseURL}V1/categories/list`)
+    fetch(`${ApiService.baseURL}list`)
       .then((response) => response.json())
       .then((data) => {
         setCategories(data)
@@ -36,7 +36,7 @@ const Navbar = () => {
             ))
           : 'Carregando...'}
 
-        <NavItems>CONTATO</NavItems>
+        <NavItems><Link to={'/contact'}>CONTATO</Link></NavItems>
       </Nav>
     </NavbarContainer>
   )

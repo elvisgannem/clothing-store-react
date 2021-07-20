@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { Nav, MenuMask, Container, NavList, ListElement } from './MobileNavbar.style'
-import Logo from './../../../../assets/img/logo_webjump.png'
+import { Nav, MenuMask, Container, NavList, ListElement, Title } from './MobileNavbar.style'
 import CategoriesContext from './../../../../context/CategoriesContext'
 import ThemeContext from './../../../../context/ThemeContext'
 
@@ -13,7 +12,8 @@ const MobileNavbar = ({ setShowMenu }) => {
             <MenuMask onClick={() => setShowMenu(false)} />
             <Nav>
                 <Container>
-                    <img src={Logo} alt="Logo Webjump!" />
+                    {/* <img src={Logo} /> */}
+                    <Title color={theme.color.primary.main}>Clothing Store</Title>
 
                     <NavList>
                         <ListElement
@@ -35,7 +35,10 @@ const MobileNavbar = ({ setShowMenu }) => {
                         <ListElement
                             fontFamily={theme.typography.main}
                             color={theme.color.secondary.dark}
-                            >Contato
+                            >
+                                <Link to={'/contact'}>
+                                    Contato
+                                </Link>
                         </ListElement>
                     </NavList>
                 </Container>

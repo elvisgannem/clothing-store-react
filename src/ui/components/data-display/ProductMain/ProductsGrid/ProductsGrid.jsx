@@ -9,7 +9,7 @@ const ProductsGrid = (props) => {
     const { products, setProducts } = useContext(ProductsContext)
     
     useEffect(() => {
-        fetch(`${ApiService.baseURL}V1/categories/${props.id}`)
+        fetch(`${ApiService.baseURL}list/${props.id}`)
         .then(response => response.json())
         .then(data => setProducts(data))
          .catch(error => console.log(error))
